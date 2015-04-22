@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:columnCount="1" >
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:layout_gravity="center_horizontal|top"
+            android:layout_marginTop="30dp"
+            android:layout_row="0"
+            android:text="@string/result"
+            android:textSize="20sp" />
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="432dp"
+            android:layout_column="0"
+            android:layout_gravity="left|center_vertical"
+            android:layout_row="0"
+            android:columnCount="1"
+            android:paddingLeft="40dp"
+            android:paddingRight="20dp" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="462dp"
+                android:layout_column="0"
+                android:layout_gravity="left|top"
+                android:layout_marginTop="60dp"
+                android:layout_row="0"
+                android:orientation="vertical" >
+
+               <!--  <TextView
+                    android:id="@+id/txtTrip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="15dp"
+                    android:text="@string/trip_name"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/tripResult"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="20dp"
+                    android:text="-"
+                    android:textSize="18sp" />
+ -->
+                <TextView
+                    android:id="@+id/txtVehical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="15dp"
+                    android:text="@string/vehical"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/vehicalResult"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="20dp"
+                    android:text="-"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/txtGas"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    android:paddingTop="15dp"
+                    android:text="@string/gas"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/gasResult"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="20dp"
+                    android:text="-"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/txtDistance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    android:paddingTop="15dp"
+                    android:text="@string/total"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/distanceResult"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="20dp"
+                    android:text="-"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/txtPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    android:paddingTop="15dp"
+                    android:text="@string/average"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/priceResult"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="20dp"
+                    android:text="-"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+            
+        </GridLayout>
+
+        <Button
+            android:id="@+id/btnMap"
+            android:layout_column="0"
+            android:layout_gravity="center_horizontal|bottom"
+            android:layout_marginBottom="20dp"
+            android:layout_row="1"
+            android:drawableLeft="@drawable/ok"
+            android:drawablePadding="10dp"
+            android:shadowColor="@color/common_signin_btn_dark_text_disabled"
+            android:text="@string/view_map" />
+
+    </GridLayout>
+
+</LinearLayout>

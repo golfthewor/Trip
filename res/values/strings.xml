@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- splash screen -->
+    <string name="app_name">Trib</string>
+    <string name="action_settings">Settings</string>
+    <string name="app_name_detail">Application for travel planner</string>
+    <string name="app_name_detail_2">and estimate fuel cost.</string>
+
+    <string name="action_home">Home</string>
+    <string name="action_history">History</string>
+    <string name="trip_name">Trip name</string>
+    <string name="confirm">Confirm</string>
+    <string name="map">Map</string>
+    <string name="result">Result</string>
+    <string name="total">Total distance</string>
+    <string name="average">Average gas price</string>
+    
+    <string name="vehical">Vehical detail</string>
+    <string name="vehical_type">Vehical type</string>
+    <string name="engine">Engine</string>
+    <string name="engine_size">Engine size</string>
+    <string name="gas">Gas</string>
+    <string name="view_map"> View map</string>
+    
+    <string-array name="vehical_type">
+        <item>Motorcycle</item>
+        <item>Pickup</item>
+        <item>Saloon</item>
+    </string-array>
+    
+    <string-array name="engine_size">
+        <item>100cc</item>
+        <item>125cc</item>
+        <item>150cc</item>
+        <item>1500cc</item>
+        <item>2000cc</item>
+        <item>2200cc</item>
+        <item>2500cc</item>
+        <item>3000cc</item>
+        <item>3200cc</item>
+    </string-array>
+    
+     <string-array name="gas">
+        <item>Gasoline 91</item>
+        <item>Gasoline 95</item>
+        <item>Gasohal 91</item>
+        <item>Gasohal 95</item>
+        <item>Gasohal E20</item>
+        <item>Gasohal E85</item>
+        <item>Diesel</item>
+    </string-array>
+    
+</resources>
