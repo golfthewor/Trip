@@ -26,11 +26,21 @@ public class Result extends Activity {
 		final TextView distance = (TextView) findViewById(R.id.distanceResult);
 		final TextView price = (TextView) findViewById(R.id.priceResult);
 		
-		vehical.setText(getIntent().getStringExtra("vehical")
-				+ " " + getIntent().getStringExtra("engine"));
-		gas.setText(getIntent().getStringExtra("gas")+ " price");
-		distance.setText("200km.");
-		price.setText("500 Bath.");
+		String getVehical =  getIntent().getStringExtra("vehical");
+		String getEngine = getIntent().getStringExtra("engine");
+		String getGas = getIntent().getStringExtra("gas");
+		
+		if(getVehical == null || getEngine == null || getGas == null){
+			vehical.setText("_");
+			gas.setText("_");
+			distance.setText("200km.");
+			price.setText("_");
+		}else{
+			vehical.setText(getVehical+" "+getEngine+"cc");
+			gas.setText(getGas+" gas price");
+			distance.setText("200km.");
+			price.setText("500 Bath.");
+		}
 		
 		btnConfirm = (Button) findViewById(R.id.btnMap);
 		btnConfirm.bringToFront();

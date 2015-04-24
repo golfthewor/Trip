@@ -48,10 +48,11 @@ public class Mapping extends Activity {
 										intent_no = new Intent(
 												getApplicationContext(),
 												Result.class);
+										
 										startActivity(intent_no);
 									}
 								});
-
+				
 				// create alert dialog
 				AlertDialog alertDialog = alertDialogBuilder.create();
 

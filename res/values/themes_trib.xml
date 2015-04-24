@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Generated with http://android-holo-colors.com -->
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+  <style name="Trib" parent="@style/_Trib"/>
+
+  <style name="_Trib" parent="android:Theme.Holo.Light">
+
+    <item name="android:editTextBackground">@drawable/trib_edit_text_holo_light</item>
+
+    <item name="android:textColorHighlight">#99ffbb33</item>
+    <item name="android:textSelectHandleLeft">@drawable/trib_text_select_handle_left</item>
+    <item name="android:textSelectHandleRight">@drawable/trib_text_select_handle_right</item>
+    <item name="android:textSelectHandle">@drawable/trib_text_select_handle_middle</item>
+
+    <item name="android:autoCompleteTextViewStyle">@style/AutoCompleteTextViewTrib</item>
+
+    <item name="android:listChoiceIndicatorMultiple">@drawable/trib_btn_check_holo_light</item>
+
+    <item name="android:listChoiceIndicatorSingle">@drawable/trib_btn_radio_holo_light</item>
+
+    <item name="android:buttonStyle">@style/ButtonTrib</item>
+
+    <item name="android:imageButtonStyle">@style/ImageButtonTrib</item>
+
+    <item name="android:dropDownSpinnerStyle">@style/SpinnerTrib</item>
+
+    <item name="android:progressBarStyleHorizontal">@style/ProgressBarTrib</item>
+
+    <item name="android:seekBarStyle">@style/SeekBarTrib</item>
+
+    <item name="android:ratingBarStyle">@style/RatingBarTrib</item>
+
+    <item name="android:ratingBarStyleIndicator">@style/RatingBarBigTrib</item>
+
+    <item name="android:ratingBarStyleSmall">@style/RatingBarSmallTrib</item>
+
+    <item name="android:buttonStyleToggle">@style/ToggleTrib</item>
+
+    <item name="android:listChoiceBackgroundIndicator">@drawable/trib_list_selector_holo_light</item>
+
+    <item name="android:activatedBackgroundIndicator">@drawable/trib_activated_background_holo_light</item>
+
+    <item name="android:fastScrollThumbDrawable">@drawable/trib_fastscroll_thumb_holo</item>
+
+  </style>
+
+</resources>

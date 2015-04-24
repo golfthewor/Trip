@@ -8,11 +8,6 @@
 package com.example.trib;
 
 public final class R {
-    public static final class array {
-        public static final int engine_size=0x7f0a0001;
-        public static final int gas=0x7f0a0002;
-        public static final int vehical_type=0x7f0a0000;
-    }
     public static final class attr {
         /** 
     The size of the ad. It must be one of BANNER, FULL_BANNER, LEADERBOARD,
@@ -399,8 +394,9 @@ containing a value of this type.
         public static final int common_signin_btn_light_text_disabled=0x7f070006;
         public static final int common_signin_btn_light_text_focused=0x7f070007;
         public static final int common_signin_btn_light_text_pressed=0x7f070005;
-        public static final int common_signin_btn_text_dark=0x7f070017;
-        public static final int common_signin_btn_text_light=0x7f070018;
+        public static final int common_signin_btn_text_dark=0x7f070018;
+        public static final int common_signin_btn_text_light=0x7f070019;
+        public static final int trib_color=0x7f070017;
         public static final int wallet_bright_foreground_disabled_holo_light=0x7f07000f;
         /** 
          Wallet colors to support consistent Wallet fragment holo dark UI in client application
@@ -419,8 +415,8 @@ containing a value of this type.
         public static final int wallet_hint_foreground_holo_light=0x7f070011;
         public static final int wallet_holo_blue_light=0x7f070015;
         public static final int wallet_link_text_light=0x7f070016;
-        public static final int wallet_primary_text_holo_light=0x7f070019;
-        public static final int wallet_secondary_text_holo_dark=0x7f07001a;
+        public static final int wallet_primary_text_holo_light=0x7f07001a;
+        public static final int wallet_secondary_text_holo_dark=0x7f07001b;
     }
     public static final class dimen {
         /**  Default screen margins, per the Android Design guidelines. 
@@ -432,6 +428,7 @@ containing a value of this type.
          */
         public static final int activity_horizontal_margin=0x7f090000;
         public static final int activity_vertical_margin=0x7f090001;
+        public static final int tab_host_default_height=0x7f090002;
     }
     public static final class drawable {
         public static final int common_full_open_on_phone=0x7f020000;
@@ -460,72 +457,195 @@ containing a value of this type.
         public static final int common_signin_btn_text_normal_light=0x7f020017;
         public static final int common_signin_btn_text_pressed_dark=0x7f020018;
         public static final int common_signin_btn_text_pressed_light=0x7f020019;
-        public static final int ic_launcher=0x7f02001a;
-        public static final int ic_plusone_medium_off_client=0x7f02001b;
-        public static final int ic_plusone_small_off_client=0x7f02001c;
-        public static final int ic_plusone_standard_off_client=0x7f02001d;
-        public static final int ic_plusone_tall_off_client=0x7f02001e;
-        public static final int ok=0x7f02001f;
-        public static final int powered_by_google_dark=0x7f020020;
-        public static final int powered_by_google_light=0x7f020021;
-        public static final int scooter=0x7f020022;
+        public static final int gradient25=0x7f02001a;
+        public static final int ic_launcher=0x7f02001b;
+        public static final int ic_plusone_medium_off_client=0x7f02001c;
+        public static final int ic_plusone_small_off_client=0x7f02001d;
+        public static final int ic_plusone_standard_off_client=0x7f02001e;
+        public static final int ic_plusone_tall_off_client=0x7f02001f;
+        public static final int ok=0x7f020020;
+        public static final int powered_by_google_dark=0x7f020021;
+        public static final int powered_by_google_light=0x7f020022;
+        public static final int scooter=0x7f020023;
+        public static final int trib_activated_background_holo_light=0x7f020024;
+        public static final int trib_btn_check_holo_light=0x7f020025;
+        public static final int trib_btn_check_off_disabled_focused_holo_light=0x7f020026;
+        public static final int trib_btn_check_off_disabled_holo_light=0x7f020027;
+        public static final int trib_btn_check_off_focused_holo_light=0x7f020028;
+        public static final int trib_btn_check_off_holo_light=0x7f020029;
+        public static final int trib_btn_check_off_pressed_holo_light=0x7f02002a;
+        public static final int trib_btn_check_on_disabled_focused_holo_light=0x7f02002b;
+        public static final int trib_btn_check_on_disabled_holo_light=0x7f02002c;
+        public static final int trib_btn_check_on_focused_holo_light=0x7f02002d;
+        public static final int trib_btn_check_on_holo_light=0x7f02002e;
+        public static final int trib_btn_check_on_pressed_holo_light=0x7f02002f;
+        public static final int trib_btn_default_disabled_focused_holo_light=0x7f020030;
+        public static final int trib_btn_default_disabled_holo_light=0x7f020031;
+        public static final int trib_btn_default_focused_holo_light=0x7f020032;
+        public static final int trib_btn_default_holo_light=0x7f020033;
+        public static final int trib_btn_default_normal_holo_light=0x7f020034;
+        public static final int trib_btn_default_pressed_holo_light=0x7f020035;
+        public static final int trib_btn_radio_holo_light=0x7f020036;
+        public static final int trib_btn_radio_off_disabled_focused_holo_light=0x7f020037;
+        public static final int trib_btn_radio_off_disabled_holo_light=0x7f020038;
+        public static final int trib_btn_radio_off_focused_holo_light=0x7f020039;
+        public static final int trib_btn_radio_off_holo_light=0x7f02003a;
+        public static final int trib_btn_radio_off_pressed_holo_light=0x7f02003b;
+        public static final int trib_btn_radio_on_disabled_focused_holo_light=0x7f02003c;
+        public static final int trib_btn_radio_on_disabled_holo_light=0x7f02003d;
+        public static final int trib_btn_radio_on_focused_holo_light=0x7f02003e;
+        public static final int trib_btn_radio_on_holo_light=0x7f02003f;
+        public static final int trib_btn_radio_on_pressed_holo_light=0x7f020040;
+        public static final int trib_btn_rating_star_off_focused_holo_light=0x7f020041;
+        public static final int trib_btn_rating_star_off_normal_holo_light=0x7f020042;
+        public static final int trib_btn_rating_star_off_pressed_holo_light=0x7f020043;
+        public static final int trib_btn_rating_star_on_focused_holo_light=0x7f020044;
+        public static final int trib_btn_rating_star_on_normal_holo_light=0x7f020045;
+        public static final int trib_btn_rating_star_on_pressed_holo_light=0x7f020046;
+        public static final int trib_btn_toggle_holo_light=0x7f020047;
+        public static final int trib_btn_toggle_off_disabled_focused_holo_light=0x7f020048;
+        public static final int trib_btn_toggle_off_disabled_holo_light=0x7f020049;
+        public static final int trib_btn_toggle_off_focused_holo_light=0x7f02004a;
+        public static final int trib_btn_toggle_off_normal_holo_light=0x7f02004b;
+        public static final int trib_btn_toggle_off_pressed_holo_light=0x7f02004c;
+        public static final int trib_btn_toggle_on_disabled_focused_holo_light=0x7f02004d;
+        public static final int trib_btn_toggle_on_disabled_holo_light=0x7f02004e;
+        public static final int trib_btn_toggle_on_focused_holo_light=0x7f02004f;
+        public static final int trib_btn_toggle_on_normal_holo_light=0x7f020050;
+        public static final int trib_btn_toggle_on_pressed_holo_light=0x7f020051;
+        public static final int trib_edit_text_holo_light=0x7f020052;
+        public static final int trib_fastscroll_thumb_default_holo=0x7f020053;
+        public static final int trib_fastscroll_thumb_holo=0x7f020054;
+        public static final int trib_fastscroll_thumb_pressed_holo=0x7f020055;
+        public static final int trib_ic_navigation_drawer=0x7f020056;
+        public static final int trib_item_background_holo_light=0x7f020057;
+        public static final int trib_list_activated_holo=0x7f020058;
+        public static final int trib_list_focused_holo=0x7f020059;
+        public static final int trib_list_longpressed_holo=0x7f02005a;
+        public static final int trib_list_pressed_holo_light=0x7f02005b;
+        public static final int trib_list_selector_background_transition_holo_light=0x7f02005c;
+        public static final int trib_list_selector_disabled_holo_light=0x7f02005d;
+        public static final int trib_list_selector_holo_light=0x7f02005e;
+        public static final int trib_progress_bg_holo_light=0x7f02005f;
+        public static final int trib_progress_horizontal_holo_light=0x7f020060;
+        public static final int trib_progress_indeterminate_horizontal_holo_light=0x7f020061;
+        public static final int trib_progress_primary_holo_light=0x7f020062;
+        public static final int trib_progress_secondary_holo_light=0x7f020063;
+        public static final int trib_progressbar_indeterminate_holo1=0x7f020064;
+        public static final int trib_progressbar_indeterminate_holo2=0x7f020065;
+        public static final int trib_progressbar_indeterminate_holo3=0x7f020066;
+        public static final int trib_progressbar_indeterminate_holo4=0x7f020067;
+        public static final int trib_progressbar_indeterminate_holo5=0x7f020068;
+        public static final int trib_progressbar_indeterminate_holo6=0x7f020069;
+        public static final int trib_progressbar_indeterminate_holo7=0x7f02006a;
+        public static final int trib_progressbar_indeterminate_holo8=0x7f02006b;
+        public static final int trib_rate_star_big_half_holo_light=0x7f02006c;
+        public static final int trib_rate_star_big_off_holo_light=0x7f02006d;
+        public static final int trib_rate_star_big_on_holo_light=0x7f02006e;
+        public static final int trib_rate_star_small_half_holo_light=0x7f02006f;
+        public static final int trib_rate_star_small_off_holo_light=0x7f020070;
+        public static final int trib_rate_star_small_on_holo_light=0x7f020071;
+        public static final int trib_ratingbar_full_empty_holo_light=0x7f020072;
+        public static final int trib_ratingbar_full_filled_holo_light=0x7f020073;
+        public static final int trib_ratingbar_full_holo_light=0x7f020074;
+        public static final int trib_ratingbar_holo_light=0x7f020075;
+        public static final int trib_ratingbar_small_holo_light=0x7f020076;
+        public static final int trib_scrubber_control_disabled_holo=0x7f020077;
+        public static final int trib_scrubber_control_focused_holo=0x7f020078;
+        public static final int trib_scrubber_control_normal_holo=0x7f020079;
+        public static final int trib_scrubber_control_pressed_holo=0x7f02007a;
+        public static final int trib_scrubber_control_selector_holo_light=0x7f02007b;
+        public static final int trib_scrubber_primary_holo=0x7f02007c;
+        public static final int trib_scrubber_progress_horizontal_holo_light=0x7f02007d;
+        public static final int trib_scrubber_secondary_holo=0x7f02007e;
+        public static final int trib_scrubber_track_holo_light=0x7f02007f;
+        public static final int trib_spinner_background_holo_light=0x7f020080;
+        public static final int trib_spinner_default_holo_light=0x7f020081;
+        public static final int trib_spinner_disabled_holo_light=0x7f020082;
+        public static final int trib_spinner_focused_holo_light=0x7f020083;
+        public static final int trib_spinner_pressed_holo_light=0x7f020084;
+        public static final int trib_switch_bg_disabled_holo_light=0x7f020085;
+        public static final int trib_switch_bg_focused_holo_light=0x7f020086;
+        public static final int trib_switch_bg_holo_light=0x7f020087;
+        public static final int trib_switch_inner_holo_light=0x7f020088;
+        public static final int trib_switch_thumb_activated_holo_light=0x7f020089;
+        public static final int trib_switch_thumb_disabled_holo_light=0x7f02008a;
+        public static final int trib_switch_thumb_holo_light=0x7f02008b;
+        public static final int trib_switch_thumb_pressed_holo_light=0x7f02008c;
+        public static final int trib_switch_track_holo_light=0x7f02008d;
+        public static final int trib_tab_indicator_holo=0x7f02008e;
+        public static final int trib_tab_selected_focused_holo=0x7f02008f;
+        public static final int trib_tab_selected_holo=0x7f020090;
+        public static final int trib_tab_selected_pressed_holo=0x7f020091;
+        public static final int trib_tab_unselected_focused_holo=0x7f020092;
+        public static final int trib_tab_unselected_holo=0x7f020093;
+        public static final int trib_tab_unselected_pressed_holo=0x7f020094;
+        public static final int trib_text_select_handle_left=0x7f020095;
+        public static final int trib_text_select_handle_middle=0x7f020096;
+        public static final int trib_text_select_handle_right=0x7f020097;
+        public static final int trib_textfield_activated_holo_light=0x7f020098;
+        public static final int trib_textfield_default_holo_light=0x7f020099;
+        public static final int trib_textfield_disabled_focused_holo_light=0x7f02009a;
+        public static final int trib_textfield_disabled_holo_light=0x7f02009b;
+        public static final int trib_textfield_focused_holo_light=0x7f02009c;
     }
     public static final class id {
-        public static final int action_settings=0x7f0c002a;
-        public static final int adjust_height=0x7f0c0000;
-        public static final int adjust_width=0x7f0c0001;
-        public static final int book_now=0x7f0c0010;
-        public static final int btnConfirm=0x7f0c0029;
-        public static final int btnMap=0x7f0c0024;
-        public static final int btn_confirm=0x7f0c001b;
-        public static final int buyButton=0x7f0c000c;
-        public static final int buy_now=0x7f0c0011;
-        public static final int buy_with_google=0x7f0c0012;
-        public static final int classic=0x7f0c0014;
-        public static final int distanceResult=0x7f0c0021;
-        public static final int donate_with_google=0x7f0c0013;
-        public static final int gasResult=0x7f0c001f;
-        public static final int grayscale=0x7f0c0015;
-        public static final int holo_dark=0x7f0c0007;
-        public static final int holo_light=0x7f0c0008;
-        public static final int hybrid=0x7f0c0003;
-        public static final int imageView1=0x7f0c001a;
-        public static final int match_parent=0x7f0c000e;
-        public static final int monochrome=0x7f0c0016;
-        public static final int none=0x7f0c0002;
-        public static final int normal=0x7f0c0004;
-        public static final int priceResult=0x7f0c0023;
-        public static final int production=0x7f0c0009;
-        public static final int sandbox=0x7f0c000a;
-        public static final int satellite=0x7f0c0005;
-        public static final int selectionDetails=0x7f0c000d;
-        public static final int spinner1=0x7f0c0025;
-        public static final int spinner2=0x7f0c0026;
-        public static final int spinner3=0x7f0c0028;
-        public static final int strict_sandbox=0x7f0c000b;
-        public static final int terrain=0x7f0c0006;
-        public static final int textView1=0x7f0c0019;
-        public static final int textView2=0x7f0c0017;
-        public static final int textView3=0x7f0c0018;
-        public static final int textView4=0x7f0c0027;
-        public static final int txtDistance=0x7f0c0020;
-        public static final int txtGas=0x7f0c001e;
-        public static final int txtPrice=0x7f0c0022;
-        public static final int txtVehical=0x7f0c001c;
-        public static final int vehicalResult=0x7f0c001d;
-        public static final int wrap_content=0x7f0c000f;
+        public static final int action_settings=0x7f0b0029;
+        public static final int adjust_height=0x7f0b0000;
+        public static final int adjust_width=0x7f0b0001;
+        public static final int book_now=0x7f0b0010;
+        public static final int btnConfirm=0x7f0b0028;
+        public static final int btnMap=0x7f0b0024;
+        public static final int btn_confirm=0x7f0b001b;
+        public static final int buyButton=0x7f0b000c;
+        public static final int buy_now=0x7f0b0011;
+        public static final int buy_with_google=0x7f0b0012;
+        public static final int classic=0x7f0b0014;
+        public static final int distanceResult=0x7f0b0021;
+        public static final int donate_with_google=0x7f0b0013;
+        public static final int gasResult=0x7f0b001f;
+        public static final int grayscale=0x7f0b0015;
+        public static final int holo_dark=0x7f0b0007;
+        public static final int holo_light=0x7f0b0008;
+        public static final int hybrid=0x7f0b0003;
+        public static final int imageView1=0x7f0b001a;
+        public static final int match_parent=0x7f0b000e;
+        public static final int monochrome=0x7f0b0016;
+        public static final int none=0x7f0b0002;
+        public static final int normal=0x7f0b0004;
+        public static final int priceResult=0x7f0b0023;
+        public static final int production=0x7f0b0009;
+        public static final int sandbox=0x7f0b000a;
+        public static final int satellite=0x7f0b0005;
+        public static final int selectionDetails=0x7f0b000d;
+        public static final int spinner2=0x7f0b0025;
+        public static final int spinner3=0x7f0b0027;
+        public static final int strict_sandbox=0x7f0b000b;
+        public static final int terrain=0x7f0b0006;
+        public static final int textView1=0x7f0b0019;
+        public static final int textView2=0x7f0b0017;
+        public static final int textView3=0x7f0b0018;
+        public static final int textView4=0x7f0b0026;
+        public static final int txtDistance=0x7f0b0020;
+        public static final int txtGas=0x7f0b001e;
+        public static final int txtPrice=0x7f0b0022;
+        public static final int txtVehical=0x7f0b001c;
+        public static final int vehicalResult=0x7f0b001d;
+        public static final int wrap_content=0x7f0b000f;
     }
     public static final class integer {
         public static final int google_play_services_version=0x7f080000;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;
-        public static final int mapping=0x7f030001;
-        public static final int result=0x7f030002;
-        public static final int vehical=0x7f030003;
+        public static final int dropdown_item=0x7f030001;
+        public static final int mapping=0x7f030002;
+        public static final int result=0x7f030003;
+        public static final int selected_item=0x7f030004;
+        public static final int vehical=0x7f030005;
     }
     public static final class menu {
-        public static final int main=0x7f0b0000;
+        public static final int main=0x7f0a0000;
     }
     public static final class raw {
         public static final int gtm_analytics=0x7f040000;
@@ -688,7 +808,20 @@ containing a value of this type.
  All customizations that are NOT specific to a particular API-level can go here. 
          */
         public static final int AppTheme=0x7f050006;
+        public static final int AutoCompleteTextViewTrib=0x7f050007;
+        public static final int ButtonTrib=0x7f050008;
+        public static final int ImageButtonTrib=0x7f050009;
+        public static final int ProgressBarTrib=0x7f05000d;
+        public static final int RatingBarBigTrib=0x7f050010;
+        public static final int RatingBarSmallTrib=0x7f050011;
+        public static final int RatingBarTrib=0x7f05000f;
+        public static final int SeekBarTrib=0x7f05000e;
+        public static final int SpinnerTrib=0x7f05000a;
+        public static final int TabTextTrib=0x7f05000c;
+        public static final int TabTrib=0x7f05000b;
         public static final int Theme_IAPTheme=0x7f050000;
+        public static final int ToggleTrib=0x7f050012;
+        public static final int Trib=0x7f050013;
         public static final int WalletFragmentDefaultButtonTextAppearance=0x7f050003;
         public static final int WalletFragmentDefaultDetailsHeaderTextAppearance=0x7f050002;
         public static final int WalletFragmentDefaultDetailsTextAppearance=0x7f050001;
@@ -698,6 +831,7 @@ containing a value of this type.
     
          */
         public static final int WalletFragmentDefaultStyle=0x7f050004;
+        public static final int _Trib=0x7f050014;
     }
     public static final class styleable {
         /** Attributes that can be used with a AdsAttrs.
