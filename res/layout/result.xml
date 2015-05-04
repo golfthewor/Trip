@@ -153,12 +153,12 @@
             android:layout_gravity="center_horizontal|bottom"
             android:layout_marginBottom="20dp"
             android:layout_row="1"
-            android:drawableLeft="@drawable/ok"
             android:drawablePadding="10dp"
             android:shadowColor="@color/common_signin_btn_dark_text_disabled"
             android:text="@string/view_map"
-            android:textColor="#FFFFFF" 
-            android:typeface="monospace"/>
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:typeface="monospace" />
 
     </GridLayout>
 

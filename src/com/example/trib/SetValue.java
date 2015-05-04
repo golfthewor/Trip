@@ -1,104 +1,104 @@
 package com.example.trib;
 
 import com.example.calculate.Calculate;
-import com.example.gasprice.SetPrice;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.EditText;
-import android.app.AlertDialog;
+import android.widget.Toast;
 
 public class SetValue extends Activity {
-	
+
 	private Intent intent_result;
-	
+
 	private String getVehical;
 	private String getEngine;
 	private String getGas;
-	private String price;
+	private String getPrice;
+
 	private double average;
 	private double distance = 200;
-	private SetPrice sp;
 	private Calculate cal;
-	
+
+	final Context context = this;
+
 	String editText;
-	
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.setvalue);
-		
+
 		getVehical = getIntent().getStringExtra("vehical");
 		getEngine = getIntent().getStringExtra("engine");
 		getGas = getIntent().getStringExtra("gas");
-		      
-		    getGasPrice();	  		   
-			dialog();
-		
-	}
-	
-	public void dialog(){
-		AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
-		final EditText input = new EditText(this);
-		
-		input.setText(price);
-		
-		alertDialogBuilder.setView(input)
-		.setTitle("Gas price.")
-		.setIcon(R.drawable.scooter)
-		.setCancelable(false)
-		.setNeutralButton("OK", new DialogInterface.OnClickListener() {
-			public void onClick(DialogInterface dialog, int id) {
-				
-				editText = input.getText().toString();
-				
-				getCalculate();
-				
-				intent_result = new Intent(getApplicationContext(),Result.class);
-				intent_result.putExtra("vehical", getVehical);
-				intent_result.putExtra("engine", getEngine);
-				intent_result.putExtra("gas", getGas);
-				
-				intent_result.putExtra("price", editText);
-				intent_result.putExtra("distance", distance);
-				intent_result.putExtra("average", average);
-				
-				startActivity(intent_result);
-				
-			}
-		});
-		AlertDialog alertDialog = alertDialogBuilder.create();
-		alertDialog.show();
-	}
-	
-	public void getGasPrice(){
-		
-		try{
-			sp = new SetPrice();
-			sp.FindPrice(getGas);
-			price = sp.getPrice();
-			
-			Log.d("Log","SetValue Price "+price);
-		}catch(Exception e){
-			e.printStackTrace();
-			Log.d("Log","Fail get gas price;");
-		}
+		getPrice = getIntent().getStringExtra("gasPrice");
+
+		dialog();
 
 	}
-	
-	public void getCalculate(){
-		
-		try{
+
+	public void dialog() {
+
+		AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
+		final EditText input = new EditText(this);
+
+		input.setText(getPrice);
+		input.setTextSize(25);
+		alertDialogBuilder.setView(input).setTitle("Gas price")
+				.setIcon(R.drawable.scooter).setCancelable(false)
+				.setNeutralButton("OK", new DialogInterface.OnClickListener() {
+					public void onClick(DialogInterface dialog, int id) {
+
+						editText = input.getText().toString();
+						
+						try {
+						   double num = Double.parseDouble(editText);
+						   Log.i("Log",num+" is a number");
+						   
+						   getCalculate();
+
+							intent_result = new Intent(getApplicationContext(),
+									Result.class);
+							intent_result.putExtra("vehical", getVehical);
+							intent_result.putExtra("engine", getEngine);
+							intent_result.putExtra("gas", getGas);
+
+							intent_result.putExtra("price", editText);
+							intent_result.putExtra("distance", distance);
+							intent_result.putExtra("average", average);
+
+							startActivity(intent_result);
+							
+						} catch (NumberFormatException e) {
+						   Log.i("Log",editText+"is not a number");
+						   Toast.makeText(context,editText+" is not a number", Toast.LENGTH_SHORT).show();
+						   dialog();
+						}
+						
+
+					}
+				});
+		AlertDialog alertDialog = alertDialogBuilder.create();
+		alertDialog.show();
+
+	}
+
+	public void getCalculate() {
+
+		try {
 			cal = new Calculate();
 			cal.setValue(editText, getEngine);
 			average = cal.cal(distance);
-		}catch(Exception e){
+		} catch (Exception e) {
 			e.printStackTrace();
-			Log.d("Log","Fail calculate;");
+			Log.d("Log", "Fail calculate;");
 		}
 	}
-	
+
 }

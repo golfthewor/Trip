@@ -39,7 +39,7 @@ public class Mapping extends Activity {
 										
 										intent_yes = new Intent(
 												getApplicationContext(),
-												Vehical.class);
+												Detail.class);
 										startActivity(intent_yes);
 									}
 								})

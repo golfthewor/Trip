@@ -1,5 +1,7 @@
 package com.example.trib;
 
+import java.text.DecimalFormat;
+
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
@@ -62,6 +64,10 @@ public class Result extends Activity {
 	
 	public void setText(){
 		
+		DecimalFormat df = new DecimalFormat("###,##0.00");
+		  
+		df.format(1.010);
+		
 		if(getVehical == null || getEngine == null || getGas == null){
 			vehical.setText("_");
 			gas.setText("_");
@@ -70,13 +76,13 @@ public class Result extends Activity {
 		}else{
 			vehical.setText(getVehical+" "+getEngine+"cc");
 			gas.setText(getGas+" "+gasPrice+"฿/l");
-			distance.setText(getDistance+"km.");
-			price.setText(average+" Bath.");
+			distance.setText(df.format(getDistance)+"km.");
+			price.setText(df.format(average)+" Bath.");
 		}
 	}
 	
 	public void onBackPressed() {
-		Intent intent_back = new Intent(getApplicationContext(),Vehical.class);
+		Intent intent_back = new Intent(getApplicationContext(),Detail.class);
 		startActivity(intent_back);
 	
 	}

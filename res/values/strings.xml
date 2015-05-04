@@ -6,7 +6,6 @@
     <string name="action_settings">Settings</string>
     <string name="app_name_detail">Application for travel planner</string>
     <string name="app_name_detail_2">and estimate fuel cost.</string>
-
     <string name="action_home">Home</string>
     <string name="action_history">History</string>
     <string name="trip_name">Trip name</string>
@@ -15,12 +14,14 @@
     <string name="result">Result</string>
     <string name="total">Total distance</string>
     <string name="average">Average gas price</string>
-    
     <string name="vehical">Vehical detail</string>
     <string name="vehical_type">Vehical type</string>
     <string name="engine">Engine</string>
     <string name="engine_size">Engine size(cc)</string>
     <string name="gas">Gas</string>
     <string name="view_map"> View map</string>
-    
+    <string name="change">Change</string>
+    <string name="gasPrice">Gas price</string>
+    <string name="dot">.</string>
+   
 </resources>
