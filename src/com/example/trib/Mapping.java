@@ -14,7 +14,7 @@ public class Mapping extends Activity {
 	private Button btnConfirm;
 	private Intent intent_yes;
 	private Intent intent_no;
-
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
@@ -36,6 +36,7 @@ public class Mapping extends Activity {
 						.setPositiveButton("Yes",new DialogInterface.OnClickListener() {
 									public void onClick(DialogInterface dialog,int id) {
 										// Go to vehical page.
+										
 										intent_yes = new Intent(
 												getApplicationContext(),
 												Vehical.class);
@@ -48,7 +49,7 @@ public class Mapping extends Activity {
 										intent_no = new Intent(
 												getApplicationContext(),
 												Result.class);
-										
+										//intent_no.putExtra("status", "no");
 										startActivity(intent_no);
 									}
 								});

@@ -1,10 +1,15 @@
 package com.example.trib;
 
+import android.text.SpannableString;
+import android.text.style.ForegroundColorSpan;
+import android.text.style.UnderlineSpan;
+import android.util.Log;
 import android.view.View.OnClickListener;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -16,7 +21,7 @@ public class Vehical extends Activity {
 
 	private Spinner spinner2, spinner3;
 	private Button btnConfirm;
-	private Intent intent_result;
+	private Intent intent_value;
 
 	private String vehical;
 	private String engine;
@@ -26,9 +31,20 @@ public class Vehical extends Activity {
 	String listEngineMotorcycle[]={"100","110","125","150"};
 	String listEnginePickup[]={"2200","2500","3000","3200"};
 	String listEngineSaloon[]={"1500","1800","2000","2400"};
-	String listGas[]={"Gasoline 91","Gasoline 95","Gasohal 91","Gasohal 95","Gasohal E20","Gasohal E85","Diesel"};
-
+	
 	String vehicalSelect = "Null";
+	String Gasoline95 = "Gasoline 95";
+	String Diesel = "Diesel";
+	String Gasohol91 = "Gasohol 91";
+	String GasoholE20 = "Gasohol E20";
+	String NGV = "NGV";
+	String Gasohol95 = "Gasohol 95";
+	String GasoholE85 = "Gasohol E85";
+	String HyForceDiesel = "HyForce Diesel";
+	
+	String listGas[] = {Gasoline95,Gasohol91,Gasohol95,GasoholE20,GasoholE85,
+			Diesel, HyForceDiesel, NGV};
+
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -50,10 +66,19 @@ public class Vehical extends Activity {
 						// TODO Auto-generated method stub
 						vehicalSelect = listVehical[which];
 						
-						TextView settxt = (TextView) findViewById(R.id.txtVehical);		
-						settxt.setText(vehicalSelect);
+						TextView settxt = (TextView) findViewById(R.id.txtVehical);	
+						SpannableString spanString = new SpannableString(vehicalSelect);
+						spanString.setSpan(new UnderlineSpan(), 0, spanString.length(), 0);
+						spanString.setSpan(new ForegroundColorSpan(Color.parseColor("#FFBF00")), 0, spanString.length(), 0);
+						settxt.setTextColor(Color.parseColor("#FFBF00"));
+						settxt.setText(spanString);
+						settxt.setOnClickListener(new View.OnClickListener() {
+						    @Override
+						    public void onClick(View v) {
+						       vehical();
+						    }
+						});
 						addListenerOnButton();
-						addListenerOnSpinnerItemSelection();
 					}
 				});
 				
@@ -66,7 +91,7 @@ public class Vehical extends Activity {
 		// TODO Auto-generated method stub
 		
 		spinner2 = (Spinner) findViewById(R.id.spinner2);
-		
+
 		if(vehicalSelect.equals("Motorcycle")){
 			ArrayAdapter<String> adapter1 = new ArrayAdapter<String>(this,R.layout.selected_item, listEngineMotorcycle);
 			adapter1.setDropDownViewResource(R.layout.dropdown_item);
@@ -93,31 +118,22 @@ public class Vehical extends Activity {
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
-				vehical = vehicalSelect; //String.valueOf(spinner1.getSelectedItem());
+				vehical = vehicalSelect; 
+				Log.d("Log","Select "+vehical);
 				engine = String.valueOf(spinner2.getSelectedItem());
+				Log.d("Log","Select "+engine);
 				gas = String.valueOf(spinner3.getSelectedItem());
+				Log.d("Log","Select "+gas);
+				
+				intent_value = new Intent(getApplicationContext(),SetValue.class);
+				intent_value.putExtra("vehical", vehical);
+				intent_value.putExtra("engine", engine);
+				intent_value.putExtra("gas", gas);
 
-				intent_result = new Intent(getApplicationContext(),
-						Result.class);
-				intent_result.putExtra("vehical", vehical);
-				intent_result.putExtra("engine", engine);
-				intent_result.putExtra("gas", gas);
-
-				startActivity(intent_result);
+				startActivity(intent_value);
 
 			}
 		});
-	}
-
-	private void addListenerOnSpinnerItemSelection() {
-		// TODO Auto-generated method stub
-
-		spinner2 = (Spinner) findViewById(R.id.spinner2);
-		spinner2.setOnItemSelectedListener(new CustomOnItemSelectedListener());
-
-		spinner3 = (Spinner) findViewById(R.id.spinner3);
-		spinner3.setOnItemSelectedListener(new CustomOnItemSelectedListener());
-
 	}
 	
 

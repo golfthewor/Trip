@@ -86,7 +86,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="15dp"
-                android:textColor="#FFFFFF"/>
+                android:textColor="#FFBF00"/>
 
             <TextView
                 android:id="@+id/textView4"
@@ -107,7 +107,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="15dp"
-                android:textColor="#FFFFFF"/>
+                android:textColor="#FFBF00"/>
 
         </LinearLayout>
 

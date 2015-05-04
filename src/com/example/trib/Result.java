@@ -13,34 +13,38 @@ public class Result extends Activity {
 	final Context context = this;
 	private Button btnConfirm;
 	private Intent intent;
+	private String gasPrice = "null";
+	private String getVehical = "null";
+	private String getEngine = "null";
+	private String getGas = "null";
+	private double average = 0.00;
+	private double getDistance;
+	
+	TextView vehical;
+	TextView gas;
+	TextView distance;
+	TextView price;
+	TextView tripName;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.result);
-
-		/* Result page detail */
-		//final TextView tripName = (TextView) findViewById(R.id.tripResult);
-		final TextView vehical = (TextView) findViewById(R.id.vehicalResult);
-		final TextView gas = (TextView) findViewById(R.id.gasResult);
-		final TextView distance = (TextView) findViewById(R.id.distanceResult);
-		final TextView price = (TextView) findViewById(R.id.priceResult);
 		
-		String getVehical =  getIntent().getStringExtra("vehical");
-		String getEngine = getIntent().getStringExtra("engine");
-		String getGas = getIntent().getStringExtra("gas");
+		vehical = (TextView) findViewById(R.id.vehicalResult);
+		gas = (TextView) findViewById(R.id.gasResult);
+		distance = (TextView) findViewById(R.id.distanceResult);
+		price = (TextView) findViewById(R.id.priceResult);
 		
-		if(getVehical == null || getEngine == null || getGas == null){
-			vehical.setText("_");
-			gas.setText("_");
-			distance.setText("200km.");
-			price.setText("_");
-		}else{
-			vehical.setText(getVehical+" "+getEngine+"cc");
-			gas.setText(getGas+" gas price");
-			distance.setText("200km.");
-			price.setText("500 Bath.");
-		}
+		getVehical = getIntent().getStringExtra("vehical");
+		getEngine = getIntent().getStringExtra("engine");
+		getGas = getIntent().getStringExtra("gas");
+		
+		gasPrice = getIntent().getStringExtra("price");
+		average = getIntent().getDoubleExtra("average", 0.00);
+		getDistance = getIntent().getDoubleExtra("distance", 0.00);
+		
+		setText();
 		
 		btnConfirm = (Button) findViewById(R.id.btnMap);
 		btnConfirm.bringToFront();
@@ -54,37 +58,27 @@ public class Result extends Activity {
 									
 		});
 		
-		/* Dialog for get trip name */
-	/*	AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(
-				context);
-
-		final EditText input = new EditText(this);
-
-		alertDialogBuilder.setMessage("Please enter trip name.").setView(input)
-				.setCancelable(false)
-				.setNeutralButton("OK", new DialogInterface.OnClickListener() {
-					public void onClick(DialogInterface dialog, int id) {
-						// if this button is clicked, close
-						// current activity
-
-						 set result 
-						tripName.setText(input.getText());
-						vehical.setText(getIntent().getStringExtra("vehical")
-								+ " " + getIntent().getStringExtra("engine"));
-						gas.setText(getIntent().getStringExtra("gas")
-								+ " price");
-						distance.setText("200km.");
-						price.setText("500 Bath.");
-
-						dialog.cancel();
-					}
-				});
-
-		// create alert dialog
-		AlertDialog alertDialog = alertDialogBuilder.create();
-
-		// show it
-		alertDialog.show();*/
+	}
+	
+	public void setText(){
+		
+		if(getVehical == null || getEngine == null || getGas == null){
+			vehical.setText("_");
+			gas.setText("_");
+			distance.setText("200km.");
+			price.setText("_");
+		}else{
+			vehical.setText(getVehical+" "+getEngine+"cc");
+			gas.setText(getGas+" "+gasPrice+"฿/l");
+			distance.setText(getDistance+"km.");
+			price.setText(average+" Bath.");
+		}
+	}
+	
+	public void onBackPressed() {
+		Intent intent_back = new Intent(getApplicationContext(),Vehical.class);
+		startActivity(intent_back);
+	
 	}
 
 }
