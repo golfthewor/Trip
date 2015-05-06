@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/black"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+        
+        <Button
+            android:id="@+id/btnPlan"
+            style="@style/ButtonTrib"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="120dp"
+            android:text="@string/plan"
+            android:textColor="#FFFFFF"
+            android:textSize="40sp"
+            android:typeface="monospace" />
+
+        <Button
+            android:id="@+id/btnGasPrice"
+            style="@style/ButtonTrib"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="151dp"
+            android:text="@string/gasPrice"
+            android:textColor="#FFFFFF"
+            android:textSize="40sp"
+            android:typeface="monospace" />
+        
+    </RelativeLayout>
+
+</LinearLayout>

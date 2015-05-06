@@ -10,9 +10,13 @@ import org.ksoap2.transport.HttpTransportSE;
 import org.xmlpull.v1.XmlPullParserException;
 
 import android.app.Activity;
+import android.app.ProgressDialog;
 import android.util.Log;
 
+
 public class ConnectPtt extends Activity {
+	
+	ProgressDialog PD;
 	
 	private String Gasoline95;
 	private String Gasoline91;
@@ -28,7 +32,7 @@ public class ConnectPtt extends Activity {
 	private static String NAMESPACE = "http://www.pttplc.com/ptt_webservice/";
 	private static String METHOD_NAME = "CurrentOilPrice";
 	private static String SOAP_ACTION = "http://www.pttplc.com/ptt_webservice/CurrentOilPrice";
-
+	
 	private SoapPrimitive Results = null;
 	HandleService sv = new HandleService();
 
@@ -37,6 +41,7 @@ public class ConnectPtt extends Activity {
 	}
 	
 	public void Connect() {
+		
 		Thread s = new Thread() {
 			@Override
 			public void run() {

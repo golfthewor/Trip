@@ -8,19 +8,17 @@ import android.os.Handler;
 public class MainActivity extends Activity {
 
 	private final int SPLASH_DISPLAY_LENGTH = 3000;
-
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		
-		//new ConnectPtt();	  
-		
 		new Handler().postDelayed(new Runnable() {
 			@Override
 			public void run() {
 				/* Create an Intent that will start the Menu-Activity. */
-				Intent mainIntent = new Intent(MainActivity.this, Mapping.class);
+				Intent mainIntent = new Intent(MainActivity.this, MenuPage.class);
 				MainActivity.this.startActivity(mainIntent);
 				MainActivity.this.finish();
 			}

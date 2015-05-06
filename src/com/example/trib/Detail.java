@@ -11,6 +11,8 @@ import android.os.Bundle;
 import android.text.SpannableString;
 import android.text.style.ForegroundColorSpan;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -310,6 +312,27 @@ public class Detail extends Activity {
 	      }else if(gas.equals("HyForce Diesel")){
 	    	  gasPrice = PriceHyForceDiesel;
 	      }
+	}
+	
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		// Inflate the menu; this adds items to the action bar if it is present.
+		getMenuInflater().inflate(R.menu.main,menu);
+		return true;
+	}
+
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		
+		int id = item.getItemId();
+		if (id == R.id.action_menu) {
+			Intent intent = new Intent(getApplicationContext(), com.example.trib.MenuPage.class);
+			startActivity(intent);
+		}else if (id == R.id.action_plan) {
+			Intent intent = new Intent(getApplicationContext(), com.example.trib.Mapping.class);
+			startActivity(intent);
+		}
+		return super.onOptionsItemSelected(item);
 	}
 	
 }
