@@ -63,11 +63,18 @@ public class Detail extends Activity {
 	TextView setGas;
 	TextView setPrice;
 
+	int distanceValue;
+	String distanceText;
+	String durationText;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.detail);
+		
+		distanceValue = getIntent().getIntExtra("distance_value", 0);
+		distanceText = getIntent().getStringExtra("distance_text");
+		durationText = getIntent().getStringExtra("duration_text");
 
 		sv = new ConnectPtt();
 		detail();
@@ -87,6 +94,10 @@ public class Detail extends Activity {
 					intent_value.putExtra("gas", gasSelect);
 					intent_value.putExtra("gasPrice", gasPrice);
 	
+					intent_value.putExtra("distanceValue", distanceValue);
+					intent_value.putExtra("distanceText", distanceText);
+					intent_value.putExtra("durationText", durationText);
+					
 					startActivity(intent_value);
 				}else{
 					AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(Detail.this);
@@ -329,7 +340,7 @@ public class Detail extends Activity {
 			Intent intent = new Intent(getApplicationContext(), com.example.trib.MenuPage.class);
 			startActivity(intent);
 		}else if (id == R.id.action_plan) {
-			Intent intent = new Intent(getApplicationContext(), com.example.trib.Mapping.class);
+			Intent intent = new Intent(getApplicationContext(), com.example.map.Map.class);
 			startActivity(intent);
 		}
 		return super.onOptionsItemSelected(item);

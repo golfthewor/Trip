@@ -7,6 +7,7 @@
     <string name="action_menu">Menu</string>
     <string name="action_plan">Plan</string>
     <string name="action_gas">Gas</string>
+    <string name="version">Version 1.0</string>
     
     
     <string name="app_name_detail">Application for travel planner</string>
@@ -29,5 +30,9 @@
     <string name="gasPrice">Gas price</string>
     <string name="dot">.</string>
     <string name="plan">Plan</string>
+    <string name="ok">OK</string>
+    <string name="clear">Clear</string>
+    <string name="next">Next</string>
+    <string name="duration">Duration</string>
 
 </resources>

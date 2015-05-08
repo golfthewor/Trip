@@ -2,14 +2,13 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" 
-    android:background="@drawable/black">
+    android:background="@drawable/black"
+    android:orientation="vertical" >
 
     <GridLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:columnCount="1" 
-        >
+        android:columnCount="1" >
 
         <TextView
             android:id="@+id/textView1"
@@ -20,9 +19,9 @@
             android:layout_marginTop="30dp"
             android:layout_row="0"
             android:text="@string/result"
-            android:textSize="28sp" 
-            android:textColor="#FFFFFF"
-            android:typeface="monospace"/>
+            android:textColor="#FFBF00"
+            android:textSize="28sp"
+            android:typeface="monospace" />
 
         <GridLayout
             android:layout_width="match_parent"
@@ -36,14 +35,15 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="462dp"
+                android:layout_height="399dp"
                 android:layout_column="0"
                 android:layout_gravity="left|top"
                 android:layout_marginTop="60dp"
                 android:layout_row="0"
                 android:orientation="vertical" >
 
-               <!--  <TextView
+                <!--
+                <TextView
                     android:id="@+id/txtTrip"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -58,16 +58,17 @@
                     android:paddingLeft="20dp"
                     android:text="-"
                     android:textSize="18sp" />
- -->
+                -->
+
                 <TextView
                     android:id="@+id/txtVehical"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingTop="15dp"
                     android:text="@string/vehical"
-                    android:textSize="18sp" 
                     android:textColor="#FFFFFF"
-                    android:typeface="monospace"/>
+                    android:textSize="18sp"
+                    android:typeface="monospace" />
 
                 <TextView
                     android:id="@+id/vehicalResult"
@@ -75,20 +76,20 @@
                     android:layout_height="wrap_content"
                     android:paddingLeft="20dp"
                     android:text="-"
+                    android:textColor="#FFBF00"
                     android:textSize="18sp"
-                    android:textColor="#FFFFFF"
                     android:typeface="monospace" />
 
                 <TextView
                     android:id="@+id/txtGas"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="25dp"
+                    android:layout_marginTop="22dp"
                     android:paddingTop="15dp"
                     android:text="@string/gas"
-                    android:textSize="18sp" 
                     android:textColor="#FFFFFF"
-                    android:typeface="monospace"/>
+                    android:textSize="18sp"
+                    android:typeface="monospace" />
 
                 <TextView
                     android:id="@+id/gasResult"
@@ -96,20 +97,20 @@
                     android:layout_height="wrap_content"
                     android:paddingLeft="20dp"
                     android:text="-"
-                    android:textSize="18sp" 
-                    android:textColor="#FFFFFF"
-                    android:typeface="monospace"/>
+                    android:textColor="#FFBF00"
+                    android:textSize="18sp"
+                    android:typeface="monospace" />
 
                 <TextView
                     android:id="@+id/txtDistance"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="25dp"
+                    android:layout_marginTop="22dp"
                     android:paddingTop="15dp"
                     android:text="@string/total"
-                    android:textSize="18sp" 
                     android:textColor="#FFFFFF"
-                    android:typeface="monospace"/>
+                    android:textSize="18sp"
+                    android:typeface="monospace" />
 
                 <TextView
                     android:id="@+id/distanceResult"
@@ -117,20 +118,20 @@
                     android:layout_height="wrap_content"
                     android:paddingLeft="20dp"
                     android:text="-"
-                    android:textSize="18sp" 
-                    android:textColor="#FFFFFF"
-                    android:typeface="monospace"/>
+                    android:textColor="#FFBF00"
+                    android:textSize="18sp"
+                    android:typeface="monospace" />
 
                 <TextView
                     android:id="@+id/txtPrice"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="25dp"
+                    android:layout_marginTop="22dp"
                     android:paddingTop="15dp"
                     android:text="@string/average"
-                    android:textSize="18sp" 
                     android:textColor="#FFFFFF"
-                    android:typeface="monospace"/>
+                    android:textSize="18sp"
+                    android:typeface="monospace" />
 
                 <TextView
                     android:id="@+id/priceResult"
@@ -138,17 +139,43 @@
                     android:layout_height="wrap_content"
                     android:paddingLeft="20dp"
                     android:text="-"
+                    android:textColor="#FFBF00"
                     android:textSize="18sp"
-                    android:textColor="#FFFFFF"
                     android:typeface="monospace" />
 
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="22dp"
+                        android:text="@string/duration"
+                        android:textColor="#FFFFFF"
+                        android:textSize="18sp"
+                        android:typeface="monospace" />
+
+                    <TextView
+                        android:id="@+id/duration"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="22dp"
+                        android:paddingLeft="20dp"
+                        android:text="-"
+                        android:textColor="#FFBF00"
+                        android:textSize="18sp"
+                        android:typeface="monospace" />
+                </LinearLayout>
             </LinearLayout>
-            
         </GridLayout>
 
         <Button
             android:id="@+id/btnMap"
             style="@style/ButtonTrib"
+            android:layout_width="284dp"
             android:layout_column="0"
             android:layout_gravity="center_horizontal|bottom"
             android:layout_marginBottom="20dp"
@@ -159,7 +186,6 @@
             android:textColor="#FFFFFF"
             android:textSize="20sp"
             android:typeface="monospace" />
-
     </GridLayout>
 
 </LinearLayout>

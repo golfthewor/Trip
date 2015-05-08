@@ -1,0 +1,45 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.mapapi.MainActivity" >
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <LinearLayout
+        android:id="@+id/LinearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true" >
+
+        <Button
+            android:id="@+id/btnClear"
+            style="@style/ButtonTrib"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.30"
+            android:text="@string/clear"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:typeface="monospace" />
+
+        <Button
+            android:id="@+id/btnConfirm"
+            style="@style/ButtonTrib"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.37"
+            android:text="@string/ok"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:typeface="monospace" />
+    </LinearLayout>
+
+</RelativeLayout>

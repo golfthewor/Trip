@@ -1,6 +1,7 @@
 package com.example.trib;
 
 import com.example.gasprice.ConnectPtt;
+import com.example.map.Map;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -42,7 +43,7 @@ public class MenuPage extends Activity {
 		
 		/* btn_planning */
 		btn_planning = (Button) findViewById(R.id.btnPlan);
-		intent_mapping = new Intent(getApplicationContext(), Mapping.class);
+		intent_mapping = new Intent(getApplicationContext(), Map.class);
 		btn_planning.setOnClickListener(new OnClickListener() {
 
 			@Override

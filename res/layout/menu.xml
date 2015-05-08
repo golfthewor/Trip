@@ -1,41 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayout1"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/black"
     android:orientation="vertical" >
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" >
-        
-        <Button
-            android:id="@+id/btnPlan"
-            style="@style/ButtonTrib"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentRight="true"
-            android:layout_marginTop="120dp"
-            android:text="@string/plan"
-            android:textColor="#FFFFFF"
-            android:textSize="40sp"
-            android:typeface="monospace" />
+    <Button
+        android:id="@+id/btnPlan"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="77dp"
+        android:background="@drawable/gasbutton" />
 
-        <Button
-            android:id="@+id/btnGasPrice"
-            style="@style/ButtonTrib"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentRight="true"
-            android:layout_marginBottom="151dp"
-            android:text="@string/gasPrice"
-            android:textColor="#FFFFFF"
-            android:textSize="40sp"
-            android:typeface="monospace" />
-        
-    </RelativeLayout>
+    <Button
+        android:id="@+id/btnGasPrice"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="79dp"
+        android:background="@drawable/planbutton" />
 
-</LinearLayout>
+</RelativeLayout>

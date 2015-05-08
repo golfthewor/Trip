@@ -39,6 +39,17 @@
         android:layout_height="80dp"
         android:layout_above="@+id/textView1"
         android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp"
         android:src="@drawable/scooter" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView3"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="36dp"
+        android:text="@string/version"
+        android:typeface="monospace" />
 
 </RelativeLayout>

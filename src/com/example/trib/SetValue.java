@@ -22,8 +22,10 @@ public class SetValue extends Activity {
 	private String getPrice;
 
 	private double average;
-	private double distance = 200;
+	private int distance;
 	private Calculate cal;
+	private String distanceText;
+	private String durationText;
 
 	final Context context = this;
 
@@ -38,6 +40,10 @@ public class SetValue extends Activity {
 		getEngine = getIntent().getStringExtra("engine");
 		getGas = getIntent().getStringExtra("gas");
 		getPrice = getIntent().getStringExtra("gasPrice");
+		
+		distance = getIntent().getIntExtra("distanceValue",0);
+		distanceText = getIntent().getStringExtra("distanceText");
+		durationText = getIntent().getStringExtra("durationText");
 
 		dialog();
 
@@ -70,7 +76,8 @@ public class SetValue extends Activity {
 							intent_result.putExtra("gas", getGas);
 
 							intent_result.putExtra("price", editText);
-							intent_result.putExtra("distance", distance);
+							intent_result.putExtra("distance", distanceText);
+							intent_result.putExtra("duration", durationText);
 							intent_result.putExtra("average", average);
 
 							startActivity(intent_result);
