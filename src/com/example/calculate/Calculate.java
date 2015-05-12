@@ -45,10 +45,10 @@ public class Calculate {
 		
 		double newDistance = distsnce/1000;
 		
-		Log.d("Log","Variable "+gasPrice+" "+newDistance+" "+consumption);
+		//Log.d("Log","Variable "+gasPrice+" "+newDistance+" "+consumption);
 		
 		this.volumn = newDistance*consumption;
-		Log.d("Log","Volumn "+volumn);
+		//Log.d("Log","Volumn "+volumn);
 		
 		this.average = gasPrice*volumn;
 		Log.d("Log","Average "+average);

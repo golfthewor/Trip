@@ -79,15 +79,15 @@ public class Result extends Activity {
 		if(getVehical == null || getEngine == null || getGas == null){
 			vehical.setText("_");
 			gas.setText("_");
-			distance.setText(getDistance);
+			distance.setText(getDistance+" km");
 			price.setText("_");
 			duration.setText("_");
 		}else{
 			vehical.setText(getVehical+" "+getEngine+"cc");
 			gas.setText(getGas+" "+gasPrice+"b/l");
-			distance.setText(getDistance);
+			distance.setText(getDistance+" km");
 			price.setText(df.format(average)+" Bath.");
-			duration.setText(getDuration);
+			duration.setText(getDuration+" hr");
 		}
 	}
 	

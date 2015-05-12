@@ -599,28 +599,27 @@ containing a value of this type.
     public static final class id {
         public static final int LinearLayout1=0x7f0b0029;
         public static final int RelativeLayout1=0x7f0b0025;
-        public static final int action_menu=0x7f0b0035;
-        public static final int action_plan=0x7f0b0036;
+        public static final int action_menu=0x7f0b0034;
+        public static final int action_plan=0x7f0b0035;
         public static final int adjust_height=0x7f0b0000;
         public static final int adjust_width=0x7f0b0001;
         public static final int book_now=0x7f0b0010;
         public static final int btnChangeEngine=0x7f0b001f;
         public static final int btnChangeGas=0x7f0b0021;
         public static final int btnChangeVehical=0x7f0b001d;
-        public static final int btnClear=0x7f0b002a;
         public static final int btnConfirm=0x7f0b0024;
         public static final int btnGasPrice=0x7f0b002b;
-        public static final int btnMap=0x7f0b0034;
+        public static final int btnMap=0x7f0b0033;
         public static final int btnNext=0x7f0b0027;
-        public static final int btnPlan=0x7f0b002c;
+        public static final int btnPlan=0x7f0b002a;
         public static final int buyButton=0x7f0b000c;
         public static final int buy_now=0x7f0b0011;
         public static final int buy_with_google=0x7f0b0012;
         public static final int classic=0x7f0b0014;
-        public static final int distanceResult=0x7f0b0030;
+        public static final int distanceResult=0x7f0b002f;
         public static final int donate_with_google=0x7f0b0013;
-        public static final int duration=0x7f0b0033;
-        public static final int gasResult=0x7f0b002e;
+        public static final int duration=0x7f0b0032;
+        public static final int gasResult=0x7f0b002d;
         public static final int grayscale=0x7f0b0015;
         public static final int holo_dark=0x7f0b0007;
         public static final int holo_light=0x7f0b0008;
@@ -632,7 +631,7 @@ containing a value of this type.
         public static final int monochrome=0x7f0b0016;
         public static final int none=0x7f0b0002;
         public static final int normal=0x7f0b0004;
-        public static final int priceResult=0x7f0b0032;
+        public static final int priceResult=0x7f0b0031;
         public static final int production=0x7f0b0009;
         public static final int sandbox=0x7f0b000a;
         public static final int satellite=0x7f0b0005;
@@ -640,17 +639,17 @@ containing a value of this type.
         public static final int strict_sandbox=0x7f0b000b;
         public static final int terrain=0x7f0b0006;
         public static final int textView1=0x7f0b0019;
-        public static final int textView2=0x7f0b0017;
-        public static final int textView3=0x7f0b0018;
+        public static final int textView2=0x7f0b0018;
+        public static final int textView3=0x7f0b0017;
         public static final int textView4=0x7f0b001b;
         public static final int textView5=0x7f0b0022;
-        public static final int txtDistance=0x7f0b002f;
+        public static final int txtDistance=0x7f0b002e;
         public static final int txtEngine=0x7f0b001e;
         public static final int txtGas=0x7f0b0020;
         public static final int txtGasPrice=0x7f0b0023;
-        public static final int txtPrice=0x7f0b0031;
+        public static final int txtPrice=0x7f0b0030;
         public static final int txtVehical=0x7f0b001c;
-        public static final int vehicalResult=0x7f0b002d;
+        public static final int vehicalResult=0x7f0b002c;
         public static final int wrap_content=0x7f0b000f;
     }
     public static final class integer {

@@ -20,17 +20,6 @@
         android:layout_alignParentBottom="true" >
 
         <Button
-            android:id="@+id/btnClear"
-            style="@style/ButtonTrib"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.30"
-            android:text="@string/clear"
-            android:textColor="#FFFFFF"
-            android:textSize="20sp"
-            android:typeface="monospace" />
-
-        <Button
             android:id="@+id/btnConfirm"
             style="@style/ButtonTrib"
             android:layout_width="wrap_content"

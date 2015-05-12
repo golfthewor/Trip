@@ -8,20 +8,20 @@
 
     <Button
         android:id="@+id/btnPlan"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="77dp"
-        android:background="@drawable/gasbutton" />
-
-    <Button
-        android:id="@+id/btnGasPrice"
         android:layout_width="180dp"
         android:layout_height="180dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="79dp"
         android:background="@drawable/planbutton" />
+
+    <Button
+        android:id="@+id/btnGasPrice"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/btnPlan"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="73dp"
+        android:background="@drawable/gasbutton" />
 
 </RelativeLayout>
