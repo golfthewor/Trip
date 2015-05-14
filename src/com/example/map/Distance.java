@@ -586,7 +586,7 @@ public class Distance extends FragmentActivity {
 			lng = loc.getLongitude();
 
 			mMap.animateCamera(CameraUpdateFactory
-					.newLatLngZoom(coordinate, 14));
+					.newLatLngZoom(coordinate, 16));
 
 		}
 

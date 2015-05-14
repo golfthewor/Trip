@@ -149,7 +149,7 @@ public class Map extends FragmentActivity {
 			mMarker = mMap.addMarker(new MarkerOptions().position(new LatLng(
 					lat, lng)));
 			mMap.animateCamera(CameraUpdateFactory
-					.newLatLngZoom(coordinate, 14));
+					.newLatLngZoom(coordinate, 16));
 
 			la.add(lat);
 			ln.add(lng);
